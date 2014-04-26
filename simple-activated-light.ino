@@ -16,13 +16,13 @@ void setup() {
   pinMode(greenPin2, OUTPUT);
   pinMode(yellowPin2, OUTPUT);
   pinMode(redPin2, OUTPUT);
-}
 
-void loop() {
   // start with green on the thoroughfare and red on the side street.
   digitalWrite(greenPin, HIGH);
   digitalWrite(redPin2, HIGH);
+}
 
+void loop() {
   if (analogRead(sensorPin) < 200) {
     // go to yellow and red on the thoroughfare.
     digitalWrite(greenPin, LOW);
@@ -45,7 +45,8 @@ void loop() {
     digitalWrite(redPin2, HIGH);
     delay(2000);
     
-    // turn off the red on the thoroughfare
+    // go back to green on the thoroughfare
     digitalWrite(redPin, LOW);
+    digitalWrite(greenPin, HIGH);
   }
 }

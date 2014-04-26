@@ -17,7 +17,7 @@ Fortunately for you and the City of Oakland, this lab is here to help guide you!
 2.  Start with this code that turns on the LED and reads the light level.
     <%= nonfunctional.ino =%>
     
-3.  Add Serial.println at the end of your `loop` function to see what light levels are recorded. Observe what happens when you cover the LDR. Experiment and choose a level (a **threshold**) that you think looks dark enough to need a street light.
+3.  Add a call to `Serial.println` at the end of your `loop` function to see what light levels are recorded. (Also add `Serial.begin(9600)` to the end of your `setup` function.) Observe what happens when you cover the LDR. Experiment and choose a level (a **threshold**) that you think looks dark enough to need a street light.
 
 4.  Add an `if` statement to your `loop` function, so that if the light level is **below** your chosen threshold, the LED is turned on, and otherwise, the LED is turned off. Your code might look like this:
     <%= basic-threshold.ino =%>
