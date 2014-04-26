@@ -4,17 +4,22 @@ The City of Oakland is embroiled in a power struggle: municipal electricity cost
 
 Fortunately for you and the City of Oakland, this lab is here to help guide you!
 
-1.  Start by connecting an LED *in series* with a resistor into pin 11. "In series" means that charge particles have to flow through the LED *and* the resistor. Start with this code that turns on the LED and reads the light level.
-    <%= nonfunctional.ino =%>
-2.  Add LDR in voltage divider to A0.
+1.  Start by connecting an LED *in series* with a 330Ω resistor into pin 11. "In series" means that charge particles have to flow through the LED *and* the resistor. Then add an LDR (Light Dependent Resistor) in series with a 10kΩ resistor, and connect the pin between the LDR and the 10kΩ resistor to analog input pin A0. Should look like this:
 
+    ![led-pin dim=300hL](img/led_pin.png "An LED on pin 11 and an LDR in a voltage divider")
+    
+    The circuit with the LDR and resistor is known as a *voltage divider*.
+
+2.  Start with this code that turns on the LED and reads the light level.
+    <%= nonfunctional.ino =%>
+    
 3.  Add Serial.println at the end of your `loop` function to see what light levels are recorded. Observe what happens when you cover the LDR. Experiment and choose a level (a **threshold**) that you think looks dark enough to need a street light.
 
 4.  Add an `if` statement to your `loop` function, so that if the light level is **below** your chosen threshold, the LED is turned on, and otherwise, the LED is turned off. Your code might look like this:
     <%= basic-threshold.ino =%>
 5.  Observe what happens when you cover the LDR. The light comes on! Yay. Call Jorry and tell him the good news. But wait -- what happens when the ambient light is *close* to the threshold? Around "dusk" you're likely to experience flicking of the light. That's less than ideal given that flickering lights can cause seizures! How can we fix this?
 
-7.  There's a concept called *hysteresis* that we can use. Roughly speaking, we'll use a higher threshold value for switching the LED from **off** to **on** and a lower threshold value for switching the LED from **on** to **off**. 
+6.  There's a concept called *hysteresis* that we can use. Roughly speaking, we'll use a higher threshold value for switching the LED from **off** to **on** and a lower threshold value for switching the LED from **on** to **off**. 
 
     One way to think about what's going on is that we have an *analog input signal* we want to convert into an *digital output signal*. A signal is a value that varies over time. In our example, the light level is a signal. An analog signal is a signal whose value can vary within a given range, often analogous to a physical value. In our example, the light level is an analog signal: its value varies according to the ambient light in the room, in the range 0 to 1023.
     
@@ -22,6 +27,6 @@ Fortunately for you and the City of Oakland, this lab is here to help guide you!
 
     ![different-thresholds dim=300h](img/different-thresholds.png "An analog input signal and a digital output signal")
 
-    To do this, we'll need to keep track of whether we're the lamp is "on" or "off". Here's some code that does this:
+    To do this, we'll need to keep track of whether we're the lamp is "on" or "off". If the light is on, and we pass the "off" trigger, we'll turn off the light. If the light is off and we pass the "on" trigger, we'll turn on the light. But, crucially, if the light is on, the "on" trigger does nothing, and similarly if the light is off then the "off" trigger does nothing. Here's some code that does this:
     <%= hysteresis.ino =%>
-8.  
+7.  Mayor Brawn is pleased. He is, in fact, so pleased that he's hired you to 
