@@ -6,7 +6,7 @@ Fortunately for you and the City of Oakland, this lab is here to help guide you!
 
 1.  Start by connecting an LED *in series* with a 330Ω resistor into pin 11. "In series" means that charge particles have to flow through the LED *and* the resistor. Then add an LDR (Light Dependent Resistor) in series with a 10kΩ resistor, and connect the pin between the LDR and the 10kΩ resistor to analog input pin A0. Should look like this:
 
-    ![led-pin dim=300hL](img/led_pin.png "An LED on pin 11 and an LDR in a voltage divider")
+    ![led-photo dim=300hL](img/led_photo.png "An LED on pin 11 and an LDR in a voltage divider")
     
     The circuit with the LDR and resistor is known as a *voltage divider*.
 
