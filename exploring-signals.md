@@ -65,7 +65,7 @@ Fortunately for you (and the City of Oakland), this lab is here to help guide yo
     <%= two-traffic-lights.ino =%>
 5.  Now that you've modeled a traffic intersection, it's time to make things complicated. Add an LDR voltage divider and connect it to pin `A0`:
 
-    ![two-traffic-lights-plus-sensor dim=400wL](img/two_traffic_lights_plus_sensor.png "Fritzing model of two traffic lights and a light sensor") ![two-traffic-lights-plus-sensor dim=400wL](img/two_traffic_lights_plus_sensor.png "Schematic model of two traffic lights and a light sensor")
+    ![two-traffic-lights-plus-sensor dim=400wL](img/two_traffic_lights_plus_sensor.png "Fritzing model of two traffic lights and a light sensor") ![two-traffic-lights-plus-sensor dim=400wL](img/two_traffic_lights_plus_sensor_schem.png "Schematic model of two traffic lights and a light sensor")
 
 6.  Pretend that the first signal is on a major busy street (say, Broadway), and that the second signal on a side street (say, Clay St.) should only be switched to green when a car is blocking light to the LDR. Use the analog input value you read from pin `A0` to trigger the signal switch.
 
