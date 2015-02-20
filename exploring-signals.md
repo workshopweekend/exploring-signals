@@ -6,7 +6,7 @@ Fortunately for you (and the City of Oakland), this lab is here to help guide yo
 
 1.  Start by connecting an LED *in series* with a 330Ω resistor into pin `11`. "In series" means that charge particles have to flow through the LED *and* the resistor. Then add an LDR (Light Dependent Resistor) in series with a 10kΩ resistor, and connect the pin between the LDR and the 10kΩ resistor to analog input pin `A0`. Your circuit might look like this:
 
-    ![led-photo dim=400wL](img/led_photo.png "Fritzing for an LED on pin 11 and an LDR in a voltage divider") ![led-photo-schem dim=300wL](img/led_photo_schem.png "Schematic for an LED on pin 11 and an LDR in a voltage divider")
+    ![led-photo dim=400wL](img/led_photo.png "Fritzing for an LED and an LDR in a voltage divider") ![led-photo-schem dim=300wL](img/led_photo_schem.png "Schematic for an LED and an LDR in a voltage divider")
     
     Learn more about [series and parallel circuits at SparkFun](https://learn.sparkfun.com/tutorials/series-and-parallel-circuits).
     
@@ -51,7 +51,7 @@ Fortunately for you (and the City of Oakland), this lab is here to help guide yo
     
     Start by creating this model of a single traffic light:
     
-    ![single-traffic-light dim=400wL](img/single_traffic_light.png "Fritzing model of a single traffic light")     ![single-traffic-light dim=400wL](img/single_traffic_light_schem_.png "Schematic model of a single traffic light")
+    ![single-traffic-light dim=400wL](img/single_traffic_light.png "Fritzing model of a single traffic light")     ![single-traffic-light dim=400wL](img/single_traffic_light_schem.png "Schematic model of a single traffic light")
 
 2.  Write some code that starts from a green light, waits 10 seconds, shifts to yellow for [the appropriate amount of time for your street](http://www.hayward-ca.gov/CITY-GOVERNMENT/DEPARTMENTS/POLICE/RLCE/pdf/MUTCD_yellow_time_specs.pdf), then shifts to red for 30 seconds before switching starting over at green. Your code may end up looking something like this:
     <%= single-traffic-light.ino =%>
@@ -65,7 +65,7 @@ Fortunately for you (and the City of Oakland), this lab is here to help guide yo
     <%= two-traffic-lights.ino =%>
 5.  Now that you've modeled a traffic intersection, it's time to make things complicated. Add an LDR voltage divider and connect it to pin `A0`:
 
-    ![two-traffic-lights-plus-sensor dim=300hL](img/two_traffic_lights_plus_sensor.png "Fritzing model of two traffic lights and a light sensor") ![two-traffic-lights-plus-sensor dim=300hL](img/two_traffic_lights_plus_sensor.png "Schematic model of two traffic lights and a light sensor")
+    ![two-traffic-lights-plus-sensor dim=400wL](img/two_traffic_lights_plus_sensor.png "Fritzing model of two traffic lights and a light sensor") ![two-traffic-lights-plus-sensor dim=400wL](img/two_traffic_lights_plus_sensor.png "Schematic model of two traffic lights and a light sensor")
 
 6.  Pretend that the first signal is on a major busy street (say, Broadway), and that the second signal on a side street (say, Clay St.) should only be switched to green when a car is blocking light to the LDR. Use the analog input value you read from pin `A0` to trigger the signal switch.
 
