@@ -57,7 +57,7 @@ Fortunately for you (and the City of Oakland), this lab is here to help guide yo
     <%= single-traffic-light.ino =%>
 3.  With that done, add a second traffic light, to model a traffic intersection between one-way streets:
 
-    ![two-traffic-lights dim=400wL](img/two_traffic_lights.png "Fritzing model of two traffic lights") ![two-traffic-lights dim=400wL](img/two_traffic_lights.png "Schematic model of two traffic lights")
+    ![two-traffic-lights dim=400wL](img/two_traffic_lights.png "Fritzing model of two traffic lights") ![two-traffic-lights dim=400wL](img/two_traffic_lights_schem.png "Schematic model of two traffic lights")
 
 4.  Modify your code so that two seconds after one traffic light switches to red, the other switches to green. Make it look as natural as you can!
 
