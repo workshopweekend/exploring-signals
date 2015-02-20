@@ -37,7 +37,7 @@ Fortunately for you (and the City of Oakland), this lab is here to help guide yo
     
     A digital signal is a signal whose value is one of a given set of values. Many digital signals consist of sequences of **high** and **low** values. In our example, whether the LED street light is on or off is a digital signal: it's either **on** or **off**.
 
-    ![different-thresholds dim=350h](img/different-thresholds.png "An analog input signal and a digital output signal")
+    ![different-thresholds dim=400h](img/different-thresholds.png "An analog input signal and a digital output signal")
 
     To do this, you'll need to keep track of whether the lamp is "on" or "off". If the light is on, and you pass the "off" trigger, then turn off the light. If the light is off and you pass the "on" trigger, then turn on the light. But, crucially, if the light is on, the "on" trigger does nothing, and similarly if the light is off then the "off" trigger does nothing. Here's some code that does this:
     <%= hysteresis.ino =%>
