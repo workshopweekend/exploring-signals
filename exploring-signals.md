@@ -4,7 +4,7 @@ The City of Oakland is embroiled in a power struggle: municipal electricity cost
 
 Fortunately for you (and the City of Oakland), this lab is here to help guide you.
 
-1.  Start by connecting an LED *in series* with a 330Ω resistor into pin `11`. "In series" means that charge particles have to flow through the LED *and* the resistor. Then add an LDR (Light Dependent Resistor) in series with a 10kΩ resistor, and connect the pin between the LDR and the 10kΩ resistor to analog input pin `A0`. Your circuit might look like this:
+1.  Start by connecting an LED *in series* with a 330Ω resistor into pin `11`. "In series" means that charge particles have to flow through the LED *and* the resistor. Then add an LDR (Light Dependent Resistor) in series with a 10kΩ resistor, and connect the pin between the LDR and the 10kΩ resistor to analog input pin `A0`. The LDR acts as a light sensor; its resistance varies depending on how much light is hitting it, and we use this physical property to determine when it is "dark" outside. Your circuit might look like this:
 
     ![led-photo dim=400wL](img/led_photo.png "Fritzing for an LED and an LDR in a voltage divider") ![led-photo-schem dim=300wL](img/led_photo_schem.png "Schematic for an LED and an LDR in a voltage divider")
     
